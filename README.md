@@ -1,12 +1,24 @@
-# React + Vite
+# The Girl Code ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A soft and whimsical journaling web app built with React + Vite + TailwindCSS.  
+This is my very first web app project — handwritten with love 💌
 
-Currently, two official plugins are available:
+## Features
+- 💭 Write and save your thoughts locally
+- 📌 Sticky note-style entry cards
+- 🔐 Data persists on refresh using `localStorage`
+- 🗑️ Delete entries with a click
+- ☁️ Get a random writing prompt
+- 📖 Scroll to your entries from the navbar
+- 👓 About the Dev section (because why not!)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/) for deployment
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run Locally
+```bash
+npm install
+npm run dev
