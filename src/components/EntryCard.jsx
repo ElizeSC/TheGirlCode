@@ -27,7 +27,7 @@ return (
       >
         
         <div className="text-xl">📌</div>
-        <p className="text-gray-800 whitespace-pre-wrap text-sm mt-2 text-center">
+        <p className="flex-grow text-gray-800 overflow-hidden text-sm mt-2 text-center break-words line-clamp-5 w-full px-2">
           {getPreview(entry)}
         </p>
       </div>
