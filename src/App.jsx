@@ -3,6 +3,8 @@ import { Hero } from './components/Hero'
 import { Navbar } from './components/Navbar'
 import { JournalInput } from './components/JournalInput'
 import EntryList from './components/EntryList'
+import { PiInstagramLogoLight } from "react-icons/pi";
+
 import './App.css'
 
 function App() {
@@ -92,6 +94,13 @@ function App() {
         It’s my safe space and I hope it becomes yours too! I’m still learning WebDev, mainly React and Tailwind, but I’m so proud of this. 💫
         <br /><br />
         Thanks for visiting! ☁️
+        <br /><br />
+        Connect with me!
+          <div className='flex justify-center space-x-6 mt-0.5'>
+            <a href='https://www.instagram.com/elle.izexo/' target="_blank" rel="noopener noreferrer">
+            <PiInstagramLogoLight className='text-2xl text-[#af3264] hover:text-[#8f1143] cursor-pointer' />
+            </a>
+          </div>
       </p>
     </div>
   </div>
