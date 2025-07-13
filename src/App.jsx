@@ -6,6 +6,14 @@ import EntryList from './components/EntryList'
 import './App.css'
 
 function App() {
+
+  const editEntry = (indexToEdit, newText) => {
+  const updated = entries.map((entry, index) =>
+    index === indexToEdit ? newText : entry
+  );
+  setEntries(updated);
+};
+
   const [entries, setEntries] = useState(() => {
     const saved = localStorage.getItem('entries');
     return saved ? JSON.parse(saved) : [];
@@ -57,7 +65,7 @@ function App() {
         <JournalInput onSave={handleSaveEntry} />
 
         <div ref={entriesRef}>
-          <EntryList entries={entries} onDelete={deleteEntry} />
+          <EntryList entries={entries} onDelete={deleteEntry} onEdit={editEntry} />
         </div>
     
       {showPrompt && (
