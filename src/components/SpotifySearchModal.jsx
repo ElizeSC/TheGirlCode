@@ -9,7 +9,7 @@ export const SpotifySearchModal = ({ isOpen, onClose, onSelectSong }) => {
   const [error, setError] = useState(null);
 
   // Backend API URL - change this based on your deployment
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+  const API_URL = 'http://localhost:3002';
 
   const searchSpotify = async () => {
     if (!searchQuery.trim()) return;

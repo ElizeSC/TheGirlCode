@@ -1,18 +1,30 @@
 // server.js
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // or whatever port your frontend runs on
+  credentials: true
+}));
 app.use(express.json());
 
 // Spotify credentials - Store these in environment variables
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
+
+console.log('🔑 Spotify Client ID:', SPOTIFY_CLIENT_ID ? 'Found' : 'Missing');
+console.log('🔑 Spotify Secret:', SPOTIFY_CLIENT_SECRET ? 'Found' : 'Missing');
+console.log('🌐 Port:', PORT);
+
+if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET) {
+  console.warn('⚠️  Missing SPOTIFY_CLIENT_ID or SPOTIFY_CLIENT_SECRET. Check backend/.env');
+}
 
 // Cache for access token
 let spotifyToken = null;
