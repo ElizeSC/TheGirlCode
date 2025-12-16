@@ -1,4 +1,5 @@
 import React from 'react'
+import { IoMdClose } from "react-icons/io";
 import { PiInstagramLogoLight } from "react-icons/pi";
 
 export const About = ({ isOpen, onClose }) => {
@@ -7,12 +8,11 @@ export const About = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
       <div className="bg-white max-w-xl w-full p-6 rounded-2xl shadow-lg relative">
-        <button
+        <IoMdClose
           className="absolute top-4 right-4 text-gray-600 hover:text-black text-xl cursor-pointer"
           onClick={onClose}
-        >
-          ×
-        </button>
+         />
+          
         <h2 className="text-2xl font-bold text-[#af3264] mb-4 text-center">👓 About the Dev</h2>
         <p className="text-gray-800 leading-relaxed text-sm text-center">
           Hii! I'm <span className="font-semibold">Elize!</span> I'm a sophomore Computer Science student at the University of the Philippines - Tacloban College, and this is my first web app 💖<br /><br />
